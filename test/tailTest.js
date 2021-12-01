@@ -1,18 +1,27 @@
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
+const assertArraysEqual = require('../assertArraysEqual');
 const tail = require('../tail');
 
 // Test code
-// const result1 = tail(["Hello", "Lighthouse", "Labs"]);
-// assertEqual(result1, ["Lighthouse", "Labs"]); // => cannot compare arrays in Javascript!
 
-const result2 = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result2.length, 2); // ensure we get back two elements
-assertEqual(result2[0], "Lighthouse"); // ensure first element is "Lighthouse"
-assertEqual(result2[1], "Labs"); // ensure second element is "Labs"
+describe("#tail", () => {
+    it("returns [2, 3] for [1, 2, 3]", () => {
+      assert.strictEqual(assertArraysEqual(tail([1, 2, 3]), [2, 3]));
+    });
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
+    it("returns [] for ['5']", () => {
+        assert.strictEqual(assertArraysEqual(tail(['5']), [])); 
+    });
 
-assertEqual(tail([1]), 1)
-assertEqual(tail([]), undefined)
+    it("returns ['Lighthouse', 'Labs'] for ['Hello', 'Lighthouse' 'Labs']", () => {
+        assert.strictEqual(assertArraysEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"])); 
+    });
+
+    it("returns undefined for []", () => {
+        assert.strictEqual(assertArraysEqual(tail([]), [])); 
+    });
+
+});
+
+
+
