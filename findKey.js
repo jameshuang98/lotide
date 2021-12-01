@@ -3,7 +3,7 @@ const assertEqual = require('./assertEqual')
 
 const findKey = function(obj, callback) {
     for (const item in obj) {
-        if (callback(obj[item])) {
+        if (callback(obj[item])) { // checks if the object value meets the callback criteria
             return item;
         }
     }

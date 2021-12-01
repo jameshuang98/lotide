@@ -4,9 +4,9 @@ const letterPositions = function(sentence) {
         let letter = sentence[i];
         if (letter !== ' ') {
             if (output[letter.toLowerCase()]) {
-                output[letter.toLowerCase()].push(i);
+                output[letter.toLowerCase()].push(i); // if key already exists, push additional letter position into the array
             } else {
-                output[letter.toLowerCase()] = [i];
+                output[letter.toLowerCase()] = [i]; // insert that letter key into the output object
             }
         }
     }

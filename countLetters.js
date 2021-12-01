@@ -3,9 +3,9 @@ const countLetters = function(sentence) {
     for (const letter of sentence) {
         if (letter !== ' ') {
             if (output[letter]) {
-                output[letter.toLowerCase()] += 1;
+                output[letter.toLowerCase()] += 1; // if the key already exists, increment the value
             } else {
-                output[letter.toLowerCase()] = 1;
+                output[letter.toLowerCase()] = 1; // adding the letter key into the array
             }
         }
     }

@@ -6,12 +6,12 @@ const without = function(original, unwanted) {
     // for (let i = 0; i < unwanted.length; i++) {
     //     for (let j = 0; j < original.length; j++) {
     //         if (unwanted[i] === original[j]) {
-    //             output.splice(j, 1);
+    //             output.splice(j, 1); // splice alters the original array
     //         }
     //     }
     // }
 
-    return original.filter(element => element !== unwanted);
+    return original.filter(element => element !== unwanted); // filtering each element of array so the output array excludes the unwanted item
 }
 
 module.exports = without;

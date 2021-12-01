@@ -6,7 +6,7 @@ const assertArraysEqual = require('./assertArraysEqual')
 const map = function(array, callback) {
     const results = [];
     for (let item of array) {
-      results.push(callback(item));
+      results.push(callback(item)); // call the callback onto each item of the array
     }
     return results;
 }

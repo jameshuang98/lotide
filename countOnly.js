@@ -5,9 +5,9 @@ const countOnly = function(allItems, itemsToCount) {
     for (const item of allItems) {
         if (itemsToCount[item]) {
             if (output[item]) {
-                output[item] += 1;
+                output[item] += 1; // increments the value of the key if the key already exists
             } else {
-                output[item] = 1;
+                output[item] = 1; // adds item as a key to our output object and keeps count of occurances starting at 1
             }
         }
     }
