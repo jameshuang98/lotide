@@ -5,7 +5,5 @@ const head = function(arr) {
 };
 
 
-
-
 // Exporting the function using module.exports
 module.exports = head;

@@ -1,13 +1,4 @@
-const assertEqual = function(actual, expected) {
-    if (actual === expected) {
-        console.log(`✅✅✅ Assertion Passed: [${actual}] === [${expected}]`)
-    } else {
-        console.log(`❌❌❌ Assertion Failed: [${actual}] !== [${expected}]`)  
-    }
-
-};
-
-const countOnly = function(sentence) {
+const countLetters = function(sentence) {
     output = {}
     for (const letter of sentence) {
         if (letter !== ' ') {
@@ -22,4 +13,4 @@ const countOnly = function(sentence) {
     return output;
 }
 
-console.log(countOnly('Welcome to LHL'))
+module.exports = countLetters;
